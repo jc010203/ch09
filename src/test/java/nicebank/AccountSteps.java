@@ -17,6 +17,8 @@ import org.junit.*;
 
 import support.KnowsTheDomain;
 
+import java.util.List;
+
 
 public class AccountSteps {
     KnowsTheDomain helper;
@@ -25,24 +27,21 @@ public class AccountSteps {
         this.helper = helper;
     }
 
-    @Given("^I have deposited (\\$\\d+\\.\\d+) in my account$")
-    public void iHaveDeposited$InMyAccount(@Transform(MoneyConverter.class) Money amount)
+    @Given("^my account has been credited with (\\$\\d+\\.\\d+)$")
+    public void myAccountHasBeenCreditedWith$(
+            @Transform(MoneyConverter.class) Money amount)
             throws Throwable {
         helper.getMyAccount().credit(amount);
     }
 
     @Then("^the balance of my account should be (\\$\\d+\\.\\d+)$")
-    public void theBalanceOfMyAccountShouldBe$(@Transform(MoneyConverter.class) Money amount) throws Throwable {
-        int timeoutMillisecs = 3000;
-        int pollIntervalMilliSecs = 100;
+    public void theBalanceOfMyAccountShouldBe$(
+            @Transform(MoneyConverter.class) Money amount) throws Throwable {
+        List<Account> accounts = Account.findAll();
 
-        while (!helper.getMyAccount().getBalance().equals(amount) && timeoutMillisecs > 0) {
-            Thread.sleep(pollIntervalMilliSecs);
-            timeoutMillisecs -= pollIntervalMilliSecs;
-        }
-
-        Assert.assertEquals("Incorrect account balance -",
-                amount, helper.getMyAccount().getBalance());
+        Assert.assertEquals(
+                "Incorrect account balance -",
+                amount,
+                accounts.get(0).getBalance());
     }
-
 }

@@ -7,15 +7,15 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 947489365,
+  "duration": 846664478,
   "status": "passed"
 });
 formatter.before({
-  "duration": 336410,
+  "duration": 377384,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6356640,
+  "duration": 4899012,
   "status": "passed"
 });
 formatter.scenario({
@@ -28,7 +28,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 5,
-  "name": "I have deposited $100.00 in my account",
+  "name": "my account has been credited with $100.00",
   "keyword": "Given "
 });
 formatter.step({
@@ -50,13 +50,13 @@ formatter.match({
   "arguments": [
     {
       "val": "$100.00",
-      "offset": 17
+      "offset": 34
     }
   ],
-  "location": "AccountSteps.iHaveDeposited$InMyAccount(Money)"
+  "location": "AccountSteps.myAccountHasBeenCreditedWith$(Money)"
 });
 formatter.result({
-  "duration": 318451471,
+  "duration": 189982721,
   "status": "passed"
 });
 formatter.match({
@@ -69,7 +69,7 @@ formatter.match({
   "location": "TellerSteps.iWithdraw$(Money)"
 });
 formatter.result({
-  "duration": 6759099562,
+  "duration": 6886576606,
   "status": "passed"
 });
 formatter.match({
@@ -82,7 +82,7 @@ formatter.match({
   "location": "CashSlotSteps.$ShouldBeDispensed(Money)"
 });
 formatter.result({
-  "duration": 4028574,
+  "duration": 2312527,
   "status": "passed"
 });
 formatter.match({
@@ -95,20 +95,20 @@ formatter.match({
   "location": "AccountSteps.theBalanceOfMyAccountShouldBe$(Money)"
 });
 formatter.result({
-  "duration": 1575163,
+  "duration": 1112120,
   "status": "passed"
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 4358249005,
+  "duration": 4220292024,
   "status": "passed"
 });
 formatter.after({
-  "duration": 22309005,
+  "duration": 13695719,
   "status": "passed"
 });
 formatter.after({
-  "duration": 48772,
+  "duration": 49600,
   "status": "passed"
 });
 });

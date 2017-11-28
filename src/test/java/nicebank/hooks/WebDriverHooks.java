@@ -19,6 +19,7 @@ public class WebDriverHooks {
 
     @After
     public void finish(Scenario scenario){
+        System.setProperty("webdriver.gecko.driver", "/Users/juan.hernandez/CukeBook/atm-example/src/test/resources/geckodriver");
         try{
             byte[] screenshot =
                     helper.getWebDriver().getScreenshotAs(OutputType.BYTES);

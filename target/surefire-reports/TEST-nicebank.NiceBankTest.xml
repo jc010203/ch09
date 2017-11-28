@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="nicebank.NiceBankTest" time="4.386" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="nicebank.NiceBankTest" time="4.239" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib"/>
@@ -7,7 +7,7 @@
     <property name="user.country.format" value="MX"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/juan.hernandez/CukeBook/ch09"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/juan.hernandez/CukeBook/ch10"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/juan.hernandez/CukeBook/ch09"/>
+    <property name="user.dir" value="/Users/juan.hernandez/CukeBook/ch10"/>
     <property name="java.runtime.version" value="1.8.0_121-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -34,7 +34,6 @@
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.12.6"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|127.0.0.1"/>
     <property name="user.home" value="/Users/juan.hernandez"/>
     <property name="user.timezone" value="America/Mexico_City"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
@@ -59,13 +58,11 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|127.0.0.1"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|127.0.0.1"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Scenario: successful withdrawal from account in credit" name="Given I have deposited $100.00 in my account" time="0.001"/>
+  <testcase classname="Scenario: successful withdrawal from account in credit" name="Given my account has been credited with $100.00" time="0.001"/>
   <testcase classname="Scenario: successful withdrawal from account in credit" name="When I withdraw $20.00" time="0.001"/>
-  <testcase classname="Scenario: successful withdrawal from account in credit" name="Then $20.00 should be dispensed" time="0.001"/>
+  <testcase classname="Scenario: successful withdrawal from account in credit" name="Then $20.00 should be dispensed" time="0"/>
   <testcase classname="Scenario: successful withdrawal from account in credit" name="And the balance of my account should be $80.00" time="0"/>
-  <testcase classname="Scenario: successful withdrawal from account in credit" name="Scenario: successful withdrawal from account in credit" time="4.383"/>
+  <testcase classname="Scenario: successful withdrawal from account in credit" name="Scenario: successful withdrawal from account in credit" time="4.237"/>
 </testsuite>

@@ -3,6 +3,7 @@ package support;
 import nicebank.Account;
 import nicebank.CashSlot;
 import nicebank.Teller;
+import org.javalite.activejdbc.Base;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -17,10 +18,22 @@ public class KnowsTheDomain {
     private Teller teller;
     private EventFiringWebDriver webDriver;
 
+    public KnowsTheDomain() {
+        if (!Base.hasConnection()) {
+            Base.open(
+                    "com.mysql.jdbc.Driver",
+                    "jdbc:mysql://localhost/bank",
+                    "teller",
+                    "password");
+        }
+    }
+
 
     public Account getMyAccount() {
-        if (null == myAccount) {
-            myAccount = new Account();
+        if (myAccount == null) {
+            myAccount = new Account(1234);
+            myAccount.setString("balance", "0.00");
+            myAccount.saveIt();
         }
         return myAccount;
     }
@@ -39,8 +52,8 @@ public class KnowsTheDomain {
         return teller;
     }
 
-    public EventFiringWebDriver getWebDriver(){
-        if(webDriver == null){
+    public EventFiringWebDriver getWebDriver() {
+        if (webDriver == null) {
             webDriver = new EventFiringWebDriver(new FirefoxDriver());
         }
 
