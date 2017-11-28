@@ -16,7 +16,7 @@ public class TransactionProcessor {
             String message = queue.read();
 
             if (message.length() > 0) {
-                
+
                 Money balance = BalanceStore.getBalance();
                 Money transactionAmount = new Money(message);
 
