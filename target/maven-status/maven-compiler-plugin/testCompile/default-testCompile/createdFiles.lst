@@ -1,9 +1,12 @@
 nicebank/hooks/ServerHooks.class
 Transforms/MoneyConverter.class
-nicebank/CashSlotSteps.class
 support/AtmUserInterface.class
-nicebank/AccountSteps.class
 nicebank/hooks/WebDriverHooks.class
 nicebank/NiceBankTest.class
-nicebank/TellerSteps.class
 support/KnowsTheDomain.class
+nicebank/hooks/BackgroundProcessHooks$1.class
+nicebank/CashSlotSteps.class
+nicebank/AccountSteps.class
+nicebank/TellerSteps.class
+nicebank/hooks/BackgroundProcessHooks.class
+nicebank/hooks/ResetHooks.class

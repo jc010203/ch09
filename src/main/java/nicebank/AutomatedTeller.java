@@ -8,7 +8,7 @@ public class AutomatedTeller implements Teller{
     }
 
     public void witdrawFromTeller(Account account, Money amount) {
-        account.debit(amount);
+        account.debit(amount.dollars());
         cashSlot.dispense(amount);
     }
 }
